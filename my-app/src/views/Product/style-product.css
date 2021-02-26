@@ -27,3 +27,46 @@
     display: block;
     margin-bottom: 0;
 }
+
+.svg-icon svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: text-bottom;
+}
+
+.service-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.service-column:first-of-type {
+    padding-top: 0
+}
+
+.service-column:last-of-type {
+    padding-bottom: 0
+}
+
+@media(min-width: 992px) {
+    .service-column {
+        border-right:1px solid #495057;
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+
+    .service-column:last-of-type {
+        border: none
+    }
+}
+
+.service-icon {
+    width: 3rem!important;
+    height: 3rem!important;
+    margin-right: 1.5rem;
+    stroke-width: 2!important
+}

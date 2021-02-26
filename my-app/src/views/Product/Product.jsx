@@ -2,8 +2,9 @@ import React from 'react';
 import InfoCard from './InfoCard';
 import './style-product.css';
 import ListCardProduct from './ListCardProduct';
-
-
+import CardInfoRight from './CardInfoRight';
+import ImageProduct from './ImageProduct';
+import { ReactComponent as Divider } from './svg/divider.svg';
 export default function Product() {
     return (
         <>
@@ -26,33 +27,27 @@ export default function Product() {
                                 </ul>
                                 {/* end::Breadcrumb*/}
                             </div>
-                            {/* end::Info*/}
-                            {/* begin::Nav*/}
-                            {/* <div className="d-flex align-items-center flex-nowrap text-nowrap overflow-auto py-1">
-                            <a href="/start/apps/chat.html" className="btn btn-active-accent fw-bolder">Danh mục 1</a>
-                            <a href="/start/apps/inbox.html" className="btn btn-active-accent fw-bolder ms-3">Danh mục 2</a>
-                            <a href="/start/apps/shop/shop-1.html" className="btn btn-active-accent fw-bolder ms-3">Danh mục 3</a>
-                            <a href="/start/apps/shop/product.html" className="btn btn-active-accent fw-bolder ms-3">Danh mục 4</a>
-                        </div> */}
-                            {/* end::Nav*/}
                         </div>
                     </div>
 
                     <div className="container" style={{ paddingRight: 0 }}>
                         <div className="flex-row-fluid">
                             <div className="card card-custom mb-5 mb-xxl-8">
-                                <div class="card-body d-flex bg-white p-12 flex-column flex-md-row flex-lg-column flex-xxl-row">
-                                    {/* begin::Image */}
-                                    <div class="bgi-no-repeat bgi-position-center bgi-size-contain h-300px h-md-auto h-lg-300px h-xxl-auto mw-100 w-650px mx-auto"
-                                        style={{ backgroundImage: "url('https://nuty.vn/wp-content/uploads/2020/12/aveeno-daily-moisturizing-lotion-354ml-600x600.jpg')" }}>
+                                <div class="card-body">
 
+                                    <div className="d-flex bg-white p-12 flex-column flex-md-row flex-lg-column flex-xxl-row">
+                                        {/* begin::Image */}
+                                        <div class="bgi-no-repeat bgi-position-center bgi-size-contain h-300px h-md-auto h-lg-300px h-xxl-auto mw-100 w-650px mx-auto"
+                                            style={{ backgroundImage: "url('https://nuty.vn/wp-content/uploads/2020/12/aveeno-daily-moisturizing-lotion-354ml-600x600.jpg')" }}>
+                                        </div>
+                                        {/* end::Image */}
+
+                                        {/* begin::Card */}
+                                        <InfoCard></InfoCard>
+                                        {/* end::Card */}
                                     </div>
-                                    {/* end::Image */}
-                                    {/* begin::Card */}
-                                    <InfoCard></InfoCard>
-                                    {/* end::Card */}
+                                    <ImageProduct></ImageProduct>
                                 </div>
-                                {/*  */}
                             </div>
                         </div>
 
@@ -101,29 +96,22 @@ export default function Product() {
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div className="col-3">
-                    <div className="container" style={{ paddingLeft: 0 }}>
-                        <div className="card card-custom">
-                            <div className="card-body">
-
-                                <div className="d-flex flex-column text-center bg-light-primary rounded py-8 px-5 mb-10">
-                                    <h3 className="fs-2 fw-bolder mb-2">Tìm kiếm sản phẩm</h3>
-                                    <span className="text-muted fs-6 fw-bolder">Công cụ tìm kiếm nhanh chóng</span>
-                                </div>
-
-                                {/* <FilterProduct></FilterProduct> */}
-                            </div>
-                        </div>
+                    <div className="container"
+                        class="position-sticky top-0"
+                        style={{ paddingLeft: 0 }}>
+                        <CardInfoRight></CardInfoRight>
                     </div>
-
-                </div>
-            </div>
+                </div >
+            </div >
             <div className="text-center mt-8 mb-8 container">
-                
-                <h1>Sản phẩm tương tự</h1>
+                <div className="title mb-4">
+                    <h1>Sản phẩm tương tự</h1>
+                    <Divider></Divider>
+                </div>
+
                 <ListCardProduct></ListCardProduct>
             </div>
 
