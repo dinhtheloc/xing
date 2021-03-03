@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import {
+    Link
+  } from "react-router-dom";
 import { ReactComponent as SidebarToggler } from './sidebar-toggler.svg';
 import { ReactComponent as ShoppingCart } from './shopping-cart.svg';
 
@@ -23,24 +26,23 @@ export default function Header() {
                     </button>
                     {/* end::Mega Menu Toggler*/}
                     {/* begin::Logo*/}
-                    <a href="/start/index.html">
-                        <img alt="Logo" src="https://preview.keenthemes.com/start/assets/media/logos/logo-default.svg" className="h-30px" />
-                    </a>
+                    <Link to="/">
+                        <img alt="Logo" src="/assets/img/XingBeauty.svg" className="h-30px" />
+                    </Link>
                     {/* end::Logo*/}
                 </div>
                 {/* end::Left*/}
                 {/* begin::Right*/}
                 <div className="d-flex align-items-center">
-                    <button class="btn btn-icon btn-accent btn-light-danger fw-bolder pulse pulse-danger" data-bs-toggle="modal" data-bs-target="#kt_header_search_modal">
+                    <Link to="/gio-hang" class="btn btn-icon btn-accent btn-light-danger fw-bolder pulse pulse-danger">
                         <span class="svg-icon svg-icon-1">
                             <ShoppingCart></ShoppingCart>
                         </span>
-                    </button>
+                    </Link>
                 </div>
                 {/* end::Right*/}
             </div>
             {/* end::Container*/}
-            {/*  */}
         </div>
     )
 }

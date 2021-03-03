@@ -114,7 +114,6 @@ export default function Product() {
 
                 <ListCardProduct></ListCardProduct>
             </div>
-
         </>
     )
 }
