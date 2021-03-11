@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import InfoCard from './InfoCard';
 import './style-product.css';
 import ListCardProduct from './ListCardProduct';
@@ -20,9 +23,11 @@ export default function Product() {
                                 {/* begin::Breadcrumb*/}
                                 <ul className="breadcrumb breadcrumb-line bg-transparent text-muted fw-bold p-0 my-1 fs-7">
                                     <li className="breadcrumb-item">
-                                        <a href="/start/index.html" className="text-muted text-hover-primary">Trang chủ</a>
+                                        <Link to="/" className="text-muted text-hover-primary">Trang chủ</Link>
                                     </li>
-                                    <li className="breadcrumb-item">Chăm sóc da</li>
+                                    <li className="breadcrumb-item">
+                                        <Link to="/" className="text-muted text-hover-primary">Chăm sóc da</Link>
+                                    </li>
                                     <li className="breadcrumb-item text-dark">Sữa Dưỡng Thể Giữ Ẩm hàng ngày Aveeno Daily Moisturizing Lotion (354ml)</li>
                                 </ul>
                                 {/* end::Breadcrumb*/}
@@ -104,8 +109,8 @@ export default function Product() {
                         style={{ paddingLeft: 0 }}>
                         <CardInfoRight></CardInfoRight>
                     </div>
-                </div >
-            </div >
+                </div>
+            </div>
             <div className="text-center mt-8 mb-8 container">
                 <div className="title mb-4">
                     <h1>Sản phẩm tương tự</h1>
